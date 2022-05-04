@@ -31,6 +31,7 @@ def ADSearch(connection,justice,searchbase):
 def startConnection():
     #load environment variables
     load_dotenv()
+    global domain 
     domain = "@{}.org".format(os.environ.get("DOMAIN"))
     server = Server(os.environ.get("SERVER"))
     admin = os.environ.get("ADMIN")
